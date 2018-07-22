@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "https://alibabacloud-faq.github.io/"
 languageCode = "ja"
 title = "Alibaba Cloud FAQ"
 theme = "hugo-theme-bootstrap4-blog"
