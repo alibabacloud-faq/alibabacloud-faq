@@ -9,7 +9,7 @@ build:
             $(git clone https://github.com/alanorth/hugo-theme-bootstrap4-blog ./themes/hugo-theme-bootstrap4-blog)
     - arjen/hugo-build:
         version: "0.40.3"
-        theme: purehugo
+        theme: hugo-theme-bootstrap4-blog
         flags: --buildDrafts=false
 #  after-steps:
 #    - slack-notifier:
