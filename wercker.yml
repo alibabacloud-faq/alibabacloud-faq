@@ -21,7 +21,7 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client curl
-- leipert/git-push:
+    - leipert/git-push:
         gh_oauth: $GIT_TOKEN
         repo: alibabacloud-faq/alibabacloud-faq.github.io
         branch: master
