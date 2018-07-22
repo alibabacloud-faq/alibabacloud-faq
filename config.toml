@@ -1,5 +1,5 @@
 baseurl = "https://alibabacloud-faq.github.io/"
-languageCode = "ja"
+languageCode = "jp"
 title = "Alibaba Cloud FAQ"
 theme = "hugo-theme-bootstrap4-blog"
 # number of posts to show on home/category/tag pages (Default: 10)
@@ -16,26 +16,29 @@ hasCJKLanguage = true
   page = "/:slug/"
 
 [[menu.sidebar]]
-  name = "Link 1"
-  url = "https://example.com"
+  name = "Alibaba Cloud(JP)"
+  url = "https://jp.alibabacloud.com/"
 
 [[menu.sidebar]]
-  name = "Link 2"
-  url = "https://example.org"
+  name = "TechBlog"
+  url = "https://techblog.sbcloud.co.jp"
 
-#[[menu.navbar]]
-#  name = "Link 1"
-#  url = "https://example.org"
+[[menu.navbar]]
+  name = "About this site"
+  url = "https://jp.alibabacloud.com"
 
+[[menu.navbar]]
+  name = "Alibaba Cloud"
+  url = "https://jp.alibabacloud.com"
 
 # Theme variables
 #
 [params]
   # Site author
-  author = "Your Name"
+  author = "SBCloud"
 
   # Description/subtitle for homepage (can be Markdown)
-  description = "A simple Hugo theme based on the Bootstrap v4 blog example."
+  description = "Alibaba Cloudに関するよくある質問をまとめました。"
 
   # Format dates with Go's time formatting
   date_format = "Mon Jan 02, 2006"
@@ -81,7 +84,7 @@ hasCJKLanguage = true
 
 # Default content language for Hugo 0.17's multilingual support (default is "en")
 # See: https://github.com/spf13/hugo/blob/master/docs/content/content/multilingual.md
-#DefaultContentLanguage = "en"
+DefaultContentLanguage = "jp"
 
 # Languages to render
 #[languages.en]
