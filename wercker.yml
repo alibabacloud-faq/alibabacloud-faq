@@ -33,11 +33,11 @@ update-search-engine:
         packages: git cmake
     - bundle-install:
         cwd: scripts/hugo-entry-to-elasticsearch-json
-#    - script:
-#      name: create entries file
-#      cwd: scripts/hugo-entry-to-elasticsearch-json
-#      code: |
-#        RUBYOPT=-EUTF-8 bundle exec ruby main.rb
+    - script:
+      name: create entries file
+      cwd: scripts/hugo-entry-to-elasticsearch-json
+      code: |
+        RUBYOPT=-EUTF-8 bundle exec ruby main.rb ../../content/faq/
 #    - script:
 #      name: update entries data
 #      cwd: hugo-entry-to-elasticsearch-json
