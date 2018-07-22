@@ -27,7 +27,7 @@ deploy:
         branch: master
         basedir: public
 
-update-gillsearch:
+update-search-engine:
   steps:
     - install-packages:
         packages: git cmake
