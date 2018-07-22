@@ -1,4 +1,4 @@
-baseurl = "https://example.org/"
+baseurl = "https://alibabacloud-faq.github.io/"
 languageCode = "ja"
 title = "Alibaba Cloud FAQ"
 theme = "hugo-theme-bootstrap4-blog"
@@ -8,6 +8,7 @@ paginate = 5
 # copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
 #googleAnalytics = "UA-123-45"
 #disqusShortname = "XYW"
+enableRobotsTXT = true
 hasCJKLanguage = true
 
 [permalinks]
