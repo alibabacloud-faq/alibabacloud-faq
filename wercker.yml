@@ -42,7 +42,7 @@ update-search-engine:
       name: update faq data
       cwd: scripts/hugo-entry-to-elasticsearch-json
       code: |
-        curl -u ${API_BASIC_USER}:${API_BASIC_PASSWORD} -XPOST "${API_SERVER_ENDPOINT}"" -F "file=@faqs.json"
+        curl -u ${API_BASIC_USER}:${API_BASIC_PASSWORD} -XPOST "${API_SERVER_ENDPOINT}" -F "file=@faqs.json"
 #  after-steps:
 #    - slack-notifier:
 #      channel: $SLACK_CHANNEL
