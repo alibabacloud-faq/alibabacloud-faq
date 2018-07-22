@@ -1,0 +1,50 @@
+box: ruby:2.3
+build:
+  steps:
+    - install-packages:
+        packages: git optipng libjpeg-progs
+    - script:
+        name: download theme
+        code: |
+            $(git clone https://github.com/alanorth/hugo-theme-bootstrap4-blog ./themes/hugo-theme-bootstrap4-blog)
+    - arjen/hugo-build:
+        version: "0.40.3"
+        theme: purehugo
+        flags: --buildDrafts=false
+#  after-steps:
+#    - slack-notifier:
+#      channel: $SLACK_CHANNEL
+#      url: $SLACK_URL
+#      username: wercker_bot
+#
+deploy:
+  steps:
+    - install-packages:
+        packages: git ssh-client curl
+- leipert/git-push:
+        gh_oauth: $GIT_TOKEN
+        repo: alibabacloud-faq/alibabacloud-faq.github.io
+        branch: master
+        basedir: public
+
+update-gillsearch:
+  steps:
+    - install-packages:
+        packages: git cmake
+    - bundle-install:
+        cwd: scripts/hugo-entry-to-elasticsearch-json
+#    - script:
+#      name: create entries file
+#      cwd: scripts/hugo-entry-to-elasticsearch-json
+#      code: |
+#        RUBYOPT=-EUTF-8 bundle exec ruby main.rb
+#    - script:
+#      name: update entries data
+#      cwd: hugo-entry-to-elasticsearch-json
+#      code: |
+#        curl -u ${API_BASIC_USER}:${API_BASIC_PASSWORD} -XPOST 'https://gill-search.mosuke.tech/update' -F "file=@entries.json"
+#  after-steps:
+#    - slack-notifier:
+#      channel: $SLACK_CHANNEL
+#      url: $SLACK_URL
+#      username: wercker_bot
